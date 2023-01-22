@@ -1,3 +1,16 @@
+#attackers {
+  float: left;
+  margin-right: 50px;
+}
+
+#defenders {
+  float: right;
+}
+
+#battle-screen {
+  
+}
+
 .App {
   text-align: center;
 }
