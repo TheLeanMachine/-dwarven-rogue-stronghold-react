@@ -1,4 +1,4 @@
-//import 'jest';
+import {describe, expect, it} from '@jest/globals';
 import { Dwarf } from '../../main/domain/Dwarf';
 
 describe('A Dwarf', () => {
