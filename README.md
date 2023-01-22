@@ -19,6 +19,21 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+
+### `npm run deploy`
+
+Deploy app to GitHub Pages with...
+```
+eval `ssh-agent -s`
+ssh-add /home/kai/.ssh/id_ed25519
+
+npm run deploy
+```
+
+Now, open [https://theleanmachine.github.io/dwarven-rogue-stronghold-react/](https://theleanmachine.github.io/dwarven-rogue-stronghold-react/) in your browser.
+
+
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
