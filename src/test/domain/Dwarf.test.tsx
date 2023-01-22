@@ -1,3 +1,4 @@
+//import 'jest';
 import { Dwarf } from '../../main/domain/Dwarf';
 
 describe('A Dwarf', () => {
