@@ -13,7 +13,7 @@ export class Dwarf {
     }
 
     isDead(): boolean {
-        return true;
+        return this._hp <= 0;
     }
 
     takeDamage(damage: number): void {
@@ -25,7 +25,7 @@ export class Dwarf {
         return this._name;
     }
 
-    get hp(): string {
-        return this.hp;
+    get hp(): number {
+        return this._hp;
     }
 }
