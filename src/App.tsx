@@ -16,8 +16,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
 
         <div id="battle-screen">
-          <AttackerTable />
-          <DefenderTable />
+          <DefenderTable dwarfs={ [gimli] }/>
+          <AttackerTable />          
         </div>
 
         <p>

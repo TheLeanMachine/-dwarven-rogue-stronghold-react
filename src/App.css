@@ -1,10 +1,11 @@
-#attackers {
-  float: left;
-  margin-right: 50px;
-}
 
 #defenders {
+  float: left;
+}
+
+#attackers {
   float: right;
+  margin-right: 50px;
 }
 
 #battle-screen {

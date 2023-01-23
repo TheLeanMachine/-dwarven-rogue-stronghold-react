@@ -1,6 +1,32 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Dwarf } from '../domain/Dwarf';
 
-export class DefenderTable extends React.Component {
+const printRow = (dwarf: Dwarf) => {
+  return (
+    <tr>
+      <td>{dwarf.name}</td>
+      <td>{dwarf.hp}</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+  );
+};
+
+interface DwarfListProps {
+  dwarfs: Dwarf[]
+}
+
+interface DwarfListState {
+  dwarfs: Dwarf[]
+}
+
+export class DefenderTable extends React.Component<DwarfListProps, DwarfListState> {
+
+  constructor(props:DwarfListProps) {
+    super(props);
+    this.state = {dwarfs: props.dwarfs};
+  }
+
   render() {
     return (
       <table id="defenders">
@@ -13,20 +39,7 @@ export class DefenderTable extends React.Component {
           <th>XP</th>
         </tr>
       </thead>
-      <tbody>
-      <tr>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-      </tr>
-      </tbody>
+      <tbody>{ this.state.dwarfs.map(printRow) }</tbody>
     </table>
     );
   }
