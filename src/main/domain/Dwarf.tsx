@@ -20,7 +20,6 @@ export class Dwarf {
         this._hp += damage;
     }
 
-
     get name(): string {
         return this._name;
     }

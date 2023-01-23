@@ -1,9 +1,11 @@
 import React from 'react';
 import { Dwarf } from '../domain/Dwarf';
 
+let counter = 0;
 const printRow = (dwarf: Dwarf) => {
+  counter++;
   return (
-    <tr>
+    <tr key={ 'dwarf-' + Number(counter).toString() }>
       <td>{dwarf.name}</td>
       <td>{dwarf.hp}</td>
       <td>...</td>
