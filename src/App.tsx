@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import { AttackerTable } from './main/components/AttackerTable';
+import { DefenderTable } from './main/components/DefenderTable';
 
 import { Dwarf } from './main/domain/Dwarf';
 
@@ -16,32 +17,7 @@ function App() {
 
         <div id="battle-screen">
           <AttackerTable />
-
-          <table id="defenders">
-            <caption>Monster Attackers</caption>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Lvl</th>
-                <th>HP</th>
-                <th>XP</th>
-              </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>...</td>
-              <td>...</td>
-              <td>...</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <td>...</td>
-              <td>...</td>
-              <td>...</td>
-              <td>...</td>
-            </tr>
-            </tbody>
-          </table>
+          <DefenderTable />
         </div>
 
         <p>
