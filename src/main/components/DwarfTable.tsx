@@ -8,7 +8,7 @@ const printRow = (dwarf: Dwarf) => {
     <tr key={'dwarf-' + Number(counter).toString()}>
       <td>{dwarf.name}</td>
       <td>{dwarf.hp}</td>
-      <td>...</td>
+      <td>{dwarf.xp}</td>
       <td>...</td>
     </tr>
   );
