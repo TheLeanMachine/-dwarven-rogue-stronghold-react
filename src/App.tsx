@@ -16,12 +16,12 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
 
         <div id="battle-screen">
-          <DefenderTable dwarfs={ [gimli] }/>
-          <AttackerTable />          
+          <DefenderTable dwarfs={[gimli]} />
+          <AttackerTable />
         </div>
 
         <p>
-          My ass says { Math.floor(Math.random() * 6) } {gimli.name}.
+          My ass says {Math.floor(Math.random() * 6)} {gimli.name}.
         </p>
       </header>
     </div>
