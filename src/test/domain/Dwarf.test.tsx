@@ -10,4 +10,13 @@ describe('A Dwarf', () => {
 
         expect(gimli.isDead()).toBe(false);
     });
+
+    it('should be able to die', () => {
+        const gimli = new Dwarf('Gimli Gloinsohn', 42);
+
+        gimli.takeDamage(12);
+        expect(gimli.isDead()).toBe(false);
+        gimli.takeDamage(30);
+        expect(gimli.isDead()).toBe(true);
+    });
 });

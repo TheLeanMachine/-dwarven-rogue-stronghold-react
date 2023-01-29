@@ -15,7 +15,7 @@ export abstract class Creature {
     }
 
     takeDamage(damage: number): void {
-        this._hp += damage;
+        this._hp -= damage;
     }
 
     get hp(): number {
