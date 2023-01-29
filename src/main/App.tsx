@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './resources/logo.svg';
 import './App.css';
 
-import { AttackerTable } from './main/components/AttackerTable';
-import { DefenderTable } from './main/components/DefenderTable';
+import { AttackerTable } from './components/AttackerTable';
+import { DefenderTable } from './components/DefenderTable';
 
-import { Dwarf } from './main/domain/Dwarf';
+import { Dwarf } from './domain/Dwarf';
 
 const gimli = new Dwarf('Gimli Gloinsohn', 42);
 
