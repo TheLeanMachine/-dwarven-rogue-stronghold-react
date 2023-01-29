@@ -9,6 +9,7 @@ import { Dwarf } from './domain/unit/Dwarf';
 import { Dice } from './domain/Dice';
 
 const gimli = new Dwarf('Gimli Gloinsohn', 42);
+const dice = new Dice(6);
 
 function App() {
   return (
@@ -21,8 +22,10 @@ function App() {
           <MonsterTable />
         </div>
 
+        <hr />
+
         <p>
-          My ass says {new Dice(6).roll()} {gimli.name}.
+          Some dice rolls for "{gimli.name}": {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}.
         </p>
       </header>
     </div>
