@@ -7,6 +7,7 @@ describe('A Dwarf', () => {
 
         expect(gimli.name).toBe('Gimli Gloinsohn');
         expect(gimli.hp).toBe(42);
+        expect(gimli.xp).toBe(0);
 
         expect(gimli.isDead()).toBe(false);
     });
@@ -18,5 +19,15 @@ describe('A Dwarf', () => {
         expect(gimli.isDead()).toBe(false);
         gimli.takeDamage(30);
         expect(gimli.isDead()).toBe(true);
+    });
+
+    it('should gain XP', () => {
+        const gimli = new Dwarf('Gimli Gloinsohn', 42);
+
+        gimli.gainXp(100);
+        expect(gimli.xp).toBe(100);
+
+        gimli.gainXp(200);
+        expect(gimli.xp).toBe(300);
     });
 });

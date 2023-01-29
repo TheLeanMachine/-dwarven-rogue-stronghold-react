@@ -10,8 +10,7 @@ export class Dice {
     }
 
     /**
-     * Returns the result of rolling the dice.
-     * @returns 
+     * @returns the result of rolling the dice 
      */
     public roll(): number {
         return Math.floor(Math.random() * this._highestNumber);
