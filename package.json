@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build",
+    "deploy": "eval `ssh-agent -s` && ssh-add /home/kai/.ssh/id_ed25519 && npm run build && gh-pages -d build",
     "lint": "eslint . --ext .tsx"
   },
   "eslintConfig": {
