@@ -13,6 +13,6 @@ export class Dice {
      * @returns the result of rolling the dice 
      */
     public roll(): number {
-        return Math.floor(Math.random() * this._highestNumber);
+        return 1 + Math.floor(Math.random() * this._highestNumber);
     }
 }
