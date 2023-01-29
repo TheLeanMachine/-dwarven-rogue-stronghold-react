@@ -5,7 +5,7 @@ import './App.css';
 import { MonsterTable } from './components/MonsterTable';
 import { DwarfTable } from './components/DwarfTable';
 
-import { Dwarf } from './domain/Dwarf';
+import { Dwarf } from './domain/unit/Dwarf';
 
 const gimli = new Dwarf('Gimli Gloinsohn', 42);
 

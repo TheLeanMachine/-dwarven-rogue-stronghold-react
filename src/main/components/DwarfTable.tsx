@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dwarf } from '../domain/Dwarf';
+import { Dwarf } from '../domain/unit/Dwarf';
 
 let counter = 0;
 const printRow = (dwarf: Dwarf) => {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { Rat } from '../../../main/domain/monster/Rat';
+import { Rat } from '../../../../main/domain/unit/monster/Rat';
 
 describe('A Rat', () => {
     it('should have reasonable properties, when newly created', () => {
