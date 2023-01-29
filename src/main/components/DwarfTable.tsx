@@ -22,7 +22,7 @@ interface DwarfListState {
   dwarfs: Dwarf[]
 }
 
-export class DefenderTable extends React.Component<DwarfListProps, DwarfListState> {
+export class DwarfTable extends React.Component<DwarfListProps, DwarfListState> {
 
   constructor(props: DwarfListProps) {
     super(props);
@@ -32,7 +32,7 @@ export class DefenderTable extends React.Component<DwarfListProps, DwarfListStat
   render() {
     return (
       <table id="defenders">
-        <caption>Dwarven Defenders</caption>
+        <caption>Dwarfs</caption>
         <thead>
           <tr>
             <th>Name</th>

@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './resources/logo.svg';
+import logo from './logo.svg';
 import './App.css';
 
-import { MonsterTable } from './components/MonsterTable';
-import { DwarfTable } from './components/DwarfTable';
+import { MonsterTable } from './main/components/MonsterTable';
+import { DwarfTable } from './main/components/DwarfTable';
 
-import { Dwarf } from './domain/Dwarf';
+import { Dwarf } from './main/domain/Dwarf';
 
 const gimli = new Dwarf('Gimli Gloinsohn', 42);
 
