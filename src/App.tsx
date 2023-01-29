@@ -6,8 +6,21 @@ import { MonsterTable } from './main/components/MonsterTable';
 import { DwarfTable } from './main/components/DwarfTable';
 
 import { Dwarf } from './main/domain/unit/Dwarf';
+import { Rat } from './main/domain/unit/monster/Rat';
+import { Dice } from './main/domain/Dice';
 
 const gimli = new Dwarf('Gimli Gloinsohn', 42);
+
+const dice = new Dice(8);
+
+const ratHp = new Dice(4);
+const monsters = [
+  new Rat(ratHp.roll()),
+  new Rat(ratHp.roll()),
+  new Rat(ratHp.roll()),
+  new Rat(ratHp.roll()),
+  new Rat(ratHp.roll())
+];
 
 function App() {
   return (
@@ -17,11 +30,13 @@ function App() {
 
         <div id="battle-screen">
           <DwarfTable dwarfs={[gimli]} />
-          <MonsterTable />
+          <MonsterTable monsters={monsters} />
         </div>
 
+        ---
+
         <p>
-          My ass says {Math.floor(Math.random() * 6)} {gimli.name}.
+          Some dice rolls for "{gimli.name}": {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}.
         </p>
       </header>
     </div>
