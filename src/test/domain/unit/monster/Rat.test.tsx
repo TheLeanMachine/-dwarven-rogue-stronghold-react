@@ -7,6 +7,7 @@ describe('A Rat', () => {
 
         expect(rat.name).toBe('Rat');
         expect(rat.hp).toBe(4);
+        expect(rat.xpValue).toBe(10);
 
         expect(rat.isDead()).toBe(false);
     });

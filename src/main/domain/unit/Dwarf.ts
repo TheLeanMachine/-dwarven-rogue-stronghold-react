@@ -16,6 +16,9 @@ export class Dwarf extends Creature {
         this._xp = this._xp + gainedXp;
     }
 
+    /**
+     * @returns the XP gained by this dwarf
+     */
     get xp(): number {
         return this._xp;
     }
