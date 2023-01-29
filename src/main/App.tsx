@@ -6,6 +6,7 @@ import { MonsterTable } from './components/MonsterTable';
 import { DwarfTable } from './components/DwarfTable';
 
 import { Dwarf } from './domain/unit/Dwarf';
+import { Dice } from './domain/Dice';
 
 const gimli = new Dwarf('Gimli Gloinsohn', 42);
 
@@ -21,7 +22,7 @@ function App() {
         </div>
 
         <p>
-          My ass says {Math.floor(Math.random() * 6)} {gimli.name}.
+          My ass says {new Dice(6).roll()} {gimli.name}.
         </p>
       </header>
     </div>
