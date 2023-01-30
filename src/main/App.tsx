@@ -5,22 +5,27 @@ import './App.css';
 import { MonsterTable } from './components/MonsterTable';
 import { DwarfTable } from './components/DwarfTable';
 
+import { Game } from './domain/Game';
 import { Dwarf } from './domain/unit/Dwarf';
 import { Rat } from './domain/unit/monster/Rat';
 import { Dice } from './domain/Dice';
 
-const gimli = new Dwarf('Gimli Gloinsohn', 42);
-const dwarfs = [gimli];
+const dice = new Dice(8);
 
-const ratHp = new Dice(4)
+const ratHp = new Dice(4);
 const monsters = [
+  new Rat(ratHp.roll()),
   new Rat(ratHp.roll()),
   new Rat(ratHp.roll()),
   new Rat(ratHp.roll()),
   new Rat(ratHp.roll())
 ];
 
-const dice = new Dice(6);
+const game = new Game();
+const dwarfsSet = game.dwarfsInCombat;
+const dwarfs: Dwarf[] = [];
+
+dwarfsSet.forEach((dw) => dwarfs.push(dw));
 
 function App() {
   return (
@@ -36,7 +41,7 @@ function App() {
         ---
 
         <p>
-          Some dice rolls for "{gimli.name}": {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}.
+          Some dice rolls: {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}.
         </p>
       </header>
     </div>
