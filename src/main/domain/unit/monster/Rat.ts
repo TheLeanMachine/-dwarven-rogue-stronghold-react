@@ -1,3 +1,4 @@
+import { Dwarf } from '../Dwarf';
 import { Monster } from './Monster';
 
 /**
@@ -7,5 +8,11 @@ export class Rat extends Monster {
 
     constructor(initialHp: number) {
         super('Rat', initialHp, 10);
+    }
+
+    public attack(dwarf: Dwarf): void {
+        // TODO impletement AND TEST(!) a dice-role 1-2
+
+        dwarf.takeDamage(2);
     }
 }

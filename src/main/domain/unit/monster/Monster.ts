@@ -1,4 +1,5 @@
 import { Creature } from '../Creature';
+import { Dwarf } from '../Dwarf';
 
 /**
  * A member of the dwarven stronghold that is being defended.
@@ -12,6 +13,8 @@ export abstract class Monster extends Creature {
 
         this._xpValue = xpValue;
     }
+
+    public abstract attack(dwarf: Dwarf): void;
 
     /**
      * @returns the XP a dwarf gains by killing this monster
