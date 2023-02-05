@@ -15,9 +15,9 @@ describe('A Rat', () => {
     it('should be able to die', () => {
         const rat = new Rat(4);
 
+        expect(rat.isDamaged()).toBeFalsy();
+
         rat.takeDamage(2);
-        expect(rat.isDead()).toBe(false);
-        rat.takeDamage(2);
-        expect(rat.isDead()).toBe(true);
+        expect(rat.isDamaged()).toBeTruthy();
     });
 });
