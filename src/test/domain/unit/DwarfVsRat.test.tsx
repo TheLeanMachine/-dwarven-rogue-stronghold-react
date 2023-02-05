@@ -21,7 +21,7 @@ describe('A fight between a Dwarf and a Rat', () => {
         expect(turns).toBeLessThanOrEqual(maxRatHp);
     });
 
-    it('should result in a killed dwarf', () => {
+    it('should result in a killed dwarf, when rat hits long enough', () => {
         const maxDwarfHp = 4;
         const gimli = new Dwarf('Gimli Gloinsohn', maxDwarfHp);
         const rat = new Rat(42);
