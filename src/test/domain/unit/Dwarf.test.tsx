@@ -30,4 +30,13 @@ describe('A Dwarf', () => {
         gimli.gainXp(200);
         expect(gimli.xp).toBe(300);
     });
+
+    it('should take damage', () => {
+        const gimli = new Dwarf('Gimli Gloinsohn', 42);
+
+        expect(gimli.isDamaged()).toBeFalsy();
+
+        gimli.takeDamage(2);
+        expect(gimli.isDamaged()).toBeTruthy();
+    });
 });

@@ -16,6 +16,10 @@ export abstract class Creature {
         return this._hp <= 0;
     }
 
+    isDamaged(): boolean {
+        return this._hp < this._initialHp;
+    }
+
     takeDamage(damage: number): void {
         this._hp -= damage;
     }
