@@ -1,6 +1,7 @@
 import { Creature } from './Creature';
 import { Monster } from './monster/Monster';
-import { Dice } from '../Dice';
+import { Weapon } from '../weapon/Weapon';
+import { Fists } from '../weapon/Fists';
 
 /**
  * A member of the dwarven stronghold that is being defended.
@@ -8,17 +9,19 @@ import { Dice } from '../Dice';
 export class Dwarf extends Creature {    
 
     private _xp = 0;
+    private _weapon: Weapon;
 
     constructor(name: string, initialHp: number) {
         super(name, initialHp);
+
+        this._weapon = new Fists();
     }
 
     public attack(monster: Monster): void {
-        // TODO implement to-hit-mechanic
-        
 
-        // TODO deal 1d8 damage        
-        monster.takeDamage(new Dice(8).roll());
+        // TODO implement to-hit-mechanic; ATM: 100% to-hit chance...
+        
+        monster.takeDamage(this._weapon.damagePerTurn());
 
         if (monster.isDead()) {
             this._xp += monster.xpValue;
