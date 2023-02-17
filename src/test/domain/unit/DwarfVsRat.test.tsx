@@ -34,4 +34,14 @@ describe('A fight between a Dwarf and a Rat', () => {
         rat.attack(gimli);
         expect(gimli.isDead()).toBeTruthy();
     });
+
+    it('should confirm that an unarmed dwarf deals 2 dmg', () => {
+        const gimli = new Dwarf('Gimli Gloinsohn', 42);
+        const rat = new Rat(42);
+
+        gimli.attack(rat);
+        rat.attack(gimli);
+
+        expect(rat.hp).toEqual(40);
+    });
 });
