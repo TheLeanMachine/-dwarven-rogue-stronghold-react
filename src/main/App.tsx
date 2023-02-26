@@ -10,6 +10,8 @@ import { Dwarf } from './domain/unit/Dwarf';
 import { Rat } from './domain/unit/monster/Rat';
 import { Dice } from './domain/Dice';
 
+import Big from 'big.js';
+
 const dice = new Dice(8);
 
 const ratHp = new Dice(4);
@@ -42,6 +44,10 @@ function App() {
 
         <p>
           Some dice rolls: {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}, {dice.roll()}.
+        </p>
+
+        <p>
+          Some decimal numbers: The sum of two {new Big('1.0').plus(new Big('2.0')).toString()} as well as a very big one {new Big('4.2e+12').toString()}.
         </p>
       </header>
     </div>
